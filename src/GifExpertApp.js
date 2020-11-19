@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
+import PropTypes from 'prop-types';
+
 
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState(['Death Note', 'Naruto', 'Fate/zero']);
@@ -28,5 +30,6 @@ export const GifExpertApp = () => {
     </>
   )
 }
+
 
 export default GifExpertApp;
