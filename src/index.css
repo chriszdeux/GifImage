@@ -48,7 +48,7 @@ input {
   /* height: 500px; */
   
   /* min-height: 100px; */
-  box-shadow: 1px 1px 5px 5px lightgreen;
+  box-shadow: 1px 1px 5px 5px lightblue;
   /* align-content: center; */
   opacity: 1;
 }
@@ -72,4 +72,5 @@ input {
   font-size: 0.8rem;
   font-family: 'Courier New', Courier, monospace;
   align-self: flex-end;
+  object-fit: contain;
 }
