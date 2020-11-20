@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const GifGrid = ( { category } ) => {
+  
+  const [count, setCount] = useState(0)
+  
+  useEffect(() => {
+    getGifs();
+  }, [])
+
   const getGifs = async () => {
     const url ='http://api.giphy.com/v1/gifs/search?q=halo&limit=10&api_key=BbMih5kv2IYw34cSaeWNwapaePQ1BX1o';
 
@@ -19,10 +26,11 @@ export const GifGrid = ( { category } ) => {
       
     console.log(gifs)
   }
-  getGifs();
   return (
     <div>
       <h2> {category} </h2>
+      <h2> { count }</h2>
+      <button onClick={ () => setCount( count + 1 )}>click</button>
     </div>
   )
 }
